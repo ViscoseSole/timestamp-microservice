@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timestamp Microservice</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="header">Hello. This is a <span> Timestamp Microservice. </span></h1>
+
+  <br>
+
+  <div>
+    <p><span> How it works: </span> By passing a parameter such as a natural language date or a unix timestamp into the URL we will return an object that has translated one into the other. </p> <br>
+  </div>
+
+  <br>
+
+  <div>
+    <span> Example usage: </span> <br> <code>https://timestamp-ms.herokuapp.com/1450137600</code> <br>
+    <code> localhost:3000/1450137600 </code> <br>
+    <span> Example output: </span> <br> <code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+  </div>
+</body>
+</html>

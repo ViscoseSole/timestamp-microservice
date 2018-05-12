@@ -1,0 +1,18 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.header span {
+  background: #FFFF00;
+}
+code {
+  background: rgba(230, 126, 34, .4);
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    width: 600px;
+  }
+}
