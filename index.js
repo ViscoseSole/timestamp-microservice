@@ -28,16 +28,17 @@ const parseTimestampJSON = (timestamp) => {
     natural: null
   }
 
+  // @ VALID UNIX PARAMETER
+  if (!isNaN(parseInt(timestamp))) {
+    result.natural = moment.unix(timestamp).format("MMMM D, YYYY");
+    result.unix = timestamp;
+  }
+
   // @ VALID NATURAL LANGUAGE PARAMETER
-  if (moment(timestamp).isValid()) {
+  else if (moment(timestamp).isValid()) {
     let date = moment(timestamp).format("MMMM D, YYYY");
     result.natural = date;
     result.unix = moment(date).unix();
-  }
-  // @ VALID UNIX PARAMETER
-  else if (moment.unix(timestamp).isValid()) {
-    result.natural = moment.unix(timestamp).format("MMMM D, YYYY");
-    result.unix = timestamp;
   }
 
   return result;
